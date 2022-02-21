@@ -1,9 +1,9 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #dce9d5;
-  --tertiary: #788585;
-  --light-dark: #a1a0a1;
-  --dark: #201110;
+  --primary: #ffffff;
+  --secondary: #27fdf3;
+  --tertiary: #000000;
+  --dark: #000000;
+  --blue: #008cff;
   --border-radius: .3rem;
 }
 
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
-  color: var(--dark);
+  color: var(--blue);
   line-height: 1.5;
   font-size: 24px;
 }
@@ -28,7 +28,7 @@ h5,
 h6 {
   font-weight: 700;
   margin: 0;
-  color: var(--dark);
+  color: var(--blue);
   line-height: 1.25;
 }
 
@@ -66,7 +66,7 @@ p {
   color: white;
   border: none;
   outline: none;
-  background-color: var(--light-dark);
+  background-color: var(--dark);
   transform: translate(-1px, -1px);
 }
 
@@ -74,7 +74,7 @@ p {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
+  box-shadow: 2px 2px var(--blue);
 }
 
 .btn-inline {
@@ -86,7 +86,7 @@ p {
   color: var(--primary);
   border: none;
   outline: none;
-  background-color: var(--light-dark);
+  background-color: var(--dark);
   box-shadow: 3px 3px var(--secondary);
   transform: translate(-1px, -1px);
   display: inline-block;
@@ -101,13 +101,16 @@ p {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
+  box-shadow: 2px 2px var(--blue);
 }
 
 .hero {
   padding: 3% 4%;
-  background-color: var(--dark);
+  background-color: var(--blue);
   color: var(--primary);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero p {
@@ -117,11 +120,11 @@ p {
 .app-title {
   font-size: 3rem;
   background-color: var(--primary);
-  color: var(--dark);
+  color: var(--blue);
   padding: 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
-  box-shadow: 6px 5px var(--light-dark);
+  box-shadow: 6px 5px var(--dark);
 }
 
 .list-group {
@@ -133,13 +136,13 @@ p {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--light-dark);
+  background-color: var(--dark);
   color: var(--primary);
   text-decoration: none;
 }
 
 .list-item:hover {
-  background-color: var(--dark);
+  background-color: var(--blue);
 }
 
 .status-icon {
@@ -160,13 +163,13 @@ p {
 
 .card {
   margin: 0 0 20px 0;
-  border: 2px solid var(--dark);
+  border: 2px solid var(--blue);
   border-radius: var(--border-radius);
 }
 
 .card-header {
   color: var(--primary);
-  background-color: var(--dark);
+  background-color: var(--blue);
   padding: 1%;
   border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
 }
@@ -178,16 +181,16 @@ p {
 h4 {
   font-weight: 700;
   margin: 0;
-  color: var(--light-dark);
+  color: var(--dark);
   line-height: 1.25;
 }
 
 .link {
-  color: var(--light-dark);
+  color: var(--primary);
 }
 
 .login-link {
-  color: var(--dark);
+  color: var(--blue);
 }
 
 .nav {
@@ -220,7 +223,7 @@ footer {
   padding: 3%;
   margin: 5px 0;
   font-size: 1.2rem;
-  border: 2px solid var(--light-dark);
+  border: 2px solid var(--dark);
   border-radius: var(--border-radius);
 }
 
@@ -332,7 +335,16 @@ footer {
 }
 /* col-sm */
 
+@media screen and (min-width: 450px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
 @media screen and (min-width: 640px) {
+  .hero {
+    flex-direction: column;
+  }
   .col-sm-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
   }
@@ -373,6 +385,9 @@ footer {
 /* col-md */
 
 @media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
   .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
   }
